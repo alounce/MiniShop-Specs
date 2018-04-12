@@ -19,12 +19,12 @@ Pod::Spec.new do |s|
   s.author = { "Oleksandr Karpenko" => "oleksandr.karpenko@vivint.com" }
   s.social_media_url = "http://twitter.com/alounce"
   s.platform = :ios, "11.0"
-  #s.source       = { :path => '.' }
   s.source = { :git => "https://github.com/alounce/MiniShop.Stock.Module.git", :tag => "#{s.version}" }
   s.source_files = "Stock", "Stock/**/*.{h,m,swift}"
-  s.resource_bundles = {
-      'UI' => ['Stock/UI/*.{lproj,storyboard}']
-  }
+  # s.resource_bundles = {
+  #     'UI' => ['Stock/UI/*.{lproj,storyboard}']
+  # }
+  s.resource = 'Stock/UI/Stock.storyboard'
   s.dependency "MiniShop.Shared" 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4' }
   s.swift_version = "4"
