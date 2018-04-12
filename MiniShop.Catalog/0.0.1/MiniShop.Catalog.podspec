@@ -20,11 +20,11 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/alounce/MiniShop.Catalog.Module.git", :tag => "#{s.version}" }
   s.source_files  = "Catalog", "Catalog/**/*.{h,m,swift}"
   s.exclude_files = "Catalog/Exclude"
-  s.resource_bundles = {
-      'UI' => ['Catalog/UI/*.{lproj,storyboard}']
-  }
-  s.resource = 'Catalog/UI/Catalog.storyboard'
-  s.resources = 'Catalog/UI/*.{lproj,storyboard}'
+  # s.resource_bundles = {
+#       'UI' => ['Catalog/UI/*.{lproj,storyboard}']
+#   }
+#   s.resource = 'Catalog/UI/Catalog.storyboard'
+  s.resources = "Catalog", "Catalog/**/*.{lproj,storyboard}"
   s.dependency "MiniShop.Shared" 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4' }
   s.swift_version = "4"
