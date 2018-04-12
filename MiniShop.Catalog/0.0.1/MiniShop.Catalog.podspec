@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
       'UI' => ['Catalog/UI/*.{lproj,storyboard}']
   }
   s.resource = 'Catalog/UI/Catalog.storyboard'
+  s.resources = 'Catalog/UI/*.{lproj,storyboard}'
   s.dependency "MiniShop.Shared" 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4' }
   s.swift_version = "4"
