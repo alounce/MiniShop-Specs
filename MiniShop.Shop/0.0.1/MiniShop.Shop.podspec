@@ -22,9 +22,10 @@ Pod::Spec.new do |s|
   #s.source       = { :path => '.' }
   s.source = { :git => "https://github.com/alounce/MiniShop.Shop.Module.git", :tag => "#{s.version}" }
   s.source_files = "Shop", "Shop/**/*.{h,m,swift}"
-  s.resource_bundles = {
-      'UI' => ['Shop/UI/*.{lproj,storyboard}']
-  }
+# s.resource_bundles = {
+#       'UI' => ['Shop/UI/*.{lproj,storyboard}']
+#   }
+  s.resource = 'Shop/UI/Shop.storyboard'
   s.dependency "MiniShop.Shared" 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4' }
   s.swift_version = "4"
